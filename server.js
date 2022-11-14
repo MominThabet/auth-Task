@@ -35,11 +35,7 @@ db.mongoose
 
 app.get('/',homeController);
 
-app.post('/user' , (req,res)=>{
-    User.create(req.body,(err,user)=>{
-        res.redirect('/users');
-    });
-});
+
 
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
